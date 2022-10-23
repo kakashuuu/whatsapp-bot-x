@@ -7,7 +7,6 @@ module.exports = class command extends Command {
             description: "Displays the bot's usable commands",
             category: 'general',
             exp: 20,
-            react: '✅',
             usage: 'help || help <command_name>',
             aliases: ['h'],
             cooldown: 10
