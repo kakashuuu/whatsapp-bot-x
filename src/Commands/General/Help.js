@@ -35,12 +35,13 @@ module.exports = class command extends Command {
 
 🏮My prefix is - ${this.helper.config.prefix}
 
-☘️Owner ~ Toshi_sama
+🎉Owner ~ Toshi_sama
 
 🧧Instagram - https://instagram.com/itz_toshi_02
 
 💮GitHub ~ https://github.com/Toshi-san001
-
+  
+    ⭐ COMMAND LIST ⭐
 *━━━━〖･General•〗━━━━*
 
 ❐ Hi, help, rank, profile
@@ -57,7 +58,7 @@ module.exports = class command extends Command {
 
 ❐ waifu, character, neko, kitsune, manga, anime
 
-📕 *Note:* Use ${this.helper.config.prefix}help <command_name> for more info of a specific command. Example: *${this.helper.config.prefix}help hello*`
+☘️ *Note:* Use ${this.helper.config.prefix}help <command_name> for more info of a specific command. Example: *${this.helper.config.prefix}help hello*`
 
 return void (await M.reply(text, 'text', reactionMessage, undefined, undefined, undefined, [M.sender.jid]))
 } else {
@@ -65,13 +66,13 @@ return void (await M.reply(text, 'text', reactionMessage, undefined, undefined, 
             const command = this.handler.commands.get(cmd) || this.handler.aliases.get(cmd)
             if (!command) return void M.reply(`No command found | *"${context.trim()}"*`)
             return void M.reply(
-                `🎐 *Command:* ${this.helper.utils.capitalize(command.name)}\n🎴 *Aliases:* ${
+                `🏮 *Command:* ${this.helper.utils.capitalize(command.name)}\n👾 *Aliases:* ${
                     !command.config.aliases
                         ? ''
                         : command.config.aliases.map((alias) => this.helper.utils.capitalize(alias)).join(', ')
-                }\n🔗 *Category:* ${this.helper.utils.capitalize(command.config.category)}\n⏰ *Cooldown:* ${
+                }\n💮 *Category:* ${this.helper.utils.capitalize(command.config.category)}\n✨ *Cooldown:* ${
                     command.config.cooldown ?? 3
-                }s\n🎗 *Usage:* ${command.config.usage
+                }s\n🌟 *Usage:* ${command.config.usage
                     .split('||')
                     .map((usage) => `${this.helper.config.prefix}${usage.trim()}`)
                     .join(' | ')}\n🧧 *Description:* ${command.config.description}`
