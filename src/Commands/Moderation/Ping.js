@@ -18,7 +18,6 @@ module.exports = class command extends Command {
      * @returns {Promise<void>}
      */
 
-    public override execute = async (M: Message, { flags, context }: IArgs): Promise<void> => {
         if (!M.groupMetadata) return void M.reply('*Try Again!*')
         const hidden = this.getPingOptions(flags)
         flags.forEach((flag) => (context = context.replace(flag, '')))
