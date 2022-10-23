@@ -38,33 +38,21 @@ module.exports = class command extends Command {
 🧧Instagram - https://instagram.com/itz_toshi_02
 💮GitHub ~ https://github.com/Toshi-san001
 
-*━━━❰ General ❱━━━*
+*━━━━〖･General•〗━━━━*
 
-${this.helper.config.prefix}Hi
-${this.helper.config.prefix}help
-${this.helper.config.prefix}rank
-${this.helper.config.prefix}profile
+Hi,help,rank,profile
 
-*━━━❰ Utils ❱━━━*
+*━━━━〖･Utils•〗━━━━*
 
-${this.helper.config.prefix}carbon
-${this.helper.config.prefix}emoji
-${this.helper.config.prefix}prettier
-${this.helper.config.prefix}retrieve
-${this.helper.config.prefix}sticker
+carbon,emoji,prettier,retrieve,sticker
 
-*━━━❰ Moderation ❱━━━*
+*━━━━〖･Moderation•〗━━━━*
 
-${this.helper.config.prefix}ping
+ping
 
-*━━━❰ Weeb ❱━━━*
+*━━━━〖･Weeb•〗━━━━*
 
-${this.helper.config.prefix}waifu
-${this.helper.config.prefix}character
-${this.helper.config.prefix}neko
-${this.helper.config.prefix}kitsune
-${this.helper.config.prefix}manga
-${this.helper.config.prefix}anime
+waifu,character,neko,kitsune,manga,anime
 
 📕 *Note:* Use ${this.helper.config.prefix}help <command_name> for more info of a specific command. Example: *${this.helper.config.prefix}help hello*`
 
