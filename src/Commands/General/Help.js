@@ -39,7 +39,6 @@ module.exports = class command extends Command {
 
 ${this.helper.config.prefix}Hi
 ${this.helper.config.prefix}help
-${this.helper.config.prefix}info
 ${this.helper.config.prefix}rank
 ${this.helper.config.prefix}profile
 
