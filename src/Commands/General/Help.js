@@ -26,10 +26,39 @@ module.exports = class command extends Command {
                 command,
                 data
             }))
-            let text = `👋🏻 (💙ω💙) Konichiwa! *@${M.sender.jid.split('@')[0]}*, I'm ${this.helper.config.name}
-              My prefix is - ${this.helper.config.prefix}
+            let text = `👋🏻 (❤️ω💙)Konichiwa! *@${M.sender.jid.split('@')[0]}*, I'm ♡︎ᴀIᴋA♡︎
+              📒Note: This is just a simple bot without any fun commands soon all commands will be add in this bot!
+          
+              🏮My prefix is - ${this.helper.config.prefix}
+              ☘️ Owner ~ Toshi_sama
+              🧧Instagram - https://instagram.com/itz_toshi_02
 
-${this.helper.config.prefix}Hello`
+*━━━❰ General ❱━━━*
+
+${this.helper.config.prefix}Hi
+${this.helper.config.prefix}help
+${this.helper.config.prefix}info
+${this.helper.config.prefix}rank
+${this.helper.config.prefix}profile
+
+*━━━❰ Utils ❱━━━*
+
+${this.helper.config.prefix}carbon
+${this.helper.config.prefix}emoji
+${this.helper.config.prefix}prettier
+${this.helper.config.prefix}retrieve
+${this.helper.config.prefix}sticker
+
+*━━━❰ Moderation ❱━━━*
+${this.helper.config.prefix}ping
+
+*━━━❰ Weeb ❱━━━*
+${this.helper.config.prefix}waifu
+${this.helper.config.prefix}character
+${this.helper.config.prefix}neko
+${this.helper.config.prefix}kitsune
+${this.helper.config.prefix}manga
+${this.helper.config.prefix}anime`
 
 return void (await M.reply(text, 'text', undefined, undefined, undefined, [M.sender.jid]))
         }
