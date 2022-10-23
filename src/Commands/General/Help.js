@@ -29,7 +29,7 @@ module.exports = class command extends Command {
             const reactionMessage = {
             react: `✅`
 }
-            let text = `👋🏻 (❤️ω💙)Konichiwa! *@${M.sender.jid.split('@')[0]}*, I'm ♡︎ᴀIᴋA♡︎!This is my simple command list and I'm here to help you with my command list!
+            let text = `👋🏻 (❤️ω💙)Konichiwa! *@${M.sender.jid.split('@')[0]}*, I'm ♡︎ᴀIᴋA♡︎!This is my simple command list and I am here to help you with my command list!
 
 🏮My prefix is - ${this.helper.config.prefix}
 
