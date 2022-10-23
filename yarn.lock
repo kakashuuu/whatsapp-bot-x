@@ -1475,11 +1475,6 @@ proxy-addr@~2.0.7:
     forwarded "0.2.0"
     ipaddr.js "1.9.1"
 
-parse-ms-js@1.2.0:
-  version" "1.2.0"
-  resolved "https://registry.npmjs.org/parse-ms-js/-/parse-ms-js-1.2.0.tgz"
-  integrity sha512-Gh74GTDbkZxfnXE+/HHsgVPQ1TwE8DQuMQXzwdik2LJcDAIaXpTI0MeY5WWVBoZK8A6bM2Pm/3yeNGVpuMvN5g==
-
 pump@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/pump/-/pump-3.0.0.tgz#b4a2116815bde2f4e1ea602354e8c75565107a64"
