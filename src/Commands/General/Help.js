@@ -22,11 +22,12 @@ module.exports = class command extends Command {
     execute = async (M, args) => {
         const { context } = args
         if (!context) {
+            const buffer = await this.client.utils.getBuffer('https://telegra.ph/file/2f013ec99ff1284e1c9a1.mp4')
             const commands = Array.from(this.handler.commands, ([command, data]) => ({
                 command,
                 data
             }))
-            let text = `👋🏻 (💙ω💙) Konichiwa! *@${M.sender.jid.split('@')[0]}*, I'm ${
+            let text = `🎉Hi there! *@${M.sender.jid.split('@')[0]}*, I'm ${
                 this.helper.config.name
             }\nMy prefix is - "${this.helper.config.prefix}"\n\nThe usable commands are listed below.`
             const categories = []
@@ -43,7 +44,7 @@ module.exports = class command extends Command {
                 text += `\`\`\`${categoryCommands.join(', ')}\`\`\``
             }
             text += `\n\n📕 *Note:* Use ${this.helper.config.prefix}help <command_name> for more info of a specific command. Example: *${this.helper.config.prefix}help hello*`
-            return void (await M.reply(text, 'text', undefined, undefined, undefined, [M.sender.jid]))
+            return void (await M.reply(buffer, 'video', true, undefined, text, [M.sender.jid]))
         } else {
             const cmd = context.trim().toLowerCase()
             const command = this.handler.commands.get(cmd) || this.handler.aliases.get(cmd)
