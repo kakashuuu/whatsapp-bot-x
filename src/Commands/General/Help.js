@@ -22,12 +22,13 @@ module.exports = class command extends Command {
 
     execute = async (M, args) => {
         const { context } = args
-        if (!context) {
-            const reactionMessage = {
+        if (!context) { 
             const commands = Array.from(this.handler.commands, ([command, data]) => ({
                 command,
                 data
             }))
+            const reactionMessage = {
+}
             let text = `👋🏻 (❤️ω💙)Konichiwa! *@${M.sender.jid.split('@')[0]}*, I'm ♡︎ᴀIᴋA♡︎!
 
 📒Note: This is just a simple bot without any fun commands soon all commands will be add in this bot!
