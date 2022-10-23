@@ -26,11 +26,10 @@ module.exports = class command extends Command {
                 command,
                 data
             }))
-            let text = `👋🏻 (💙ω💙) Konichiwa! *@${M.sender.jid.split('@')[0]}*, I'm ${
-                this.helper.config.name
-            }\nMy prefix is - "${this.helper.config.prefix}"
-Hello 
-`
+            let text = `👋🏻 (💙ω💙) Konichiwa! *@${M.sender.jid.split('@')[0]}*, I'm ${this.helper.config.name}
+              My prefix is - ${this.helper.config.prefix}
+
+${this.helper.config.prefix}Hello`
             
         }
     }
