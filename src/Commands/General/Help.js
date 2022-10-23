@@ -30,7 +30,8 @@ module.exports = class command extends Command {
               My prefix is - ${this.helper.config.prefix}
 
 ${this.helper.config.prefix}Hello`
-            )
+
+return void (await M.reply(text, 'text', undefined, undefined, undefined, [M.sender.jid]))
         }
     }
 }
