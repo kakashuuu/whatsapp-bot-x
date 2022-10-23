@@ -50,9 +50,11 @@ ${this.helper.config.prefix}retrieve
 ${this.helper.config.prefix}sticker
 
 *━━━❰ Moderation ❱━━━*
+
 ${this.helper.config.prefix}ping
 
 *━━━❰ Weeb ❱━━━*
+
 ${this.helper.config.prefix}waifu
 ${this.helper.config.prefix}character
 ${this.helper.config.prefix}neko
