@@ -29,7 +29,7 @@ module.exports = class command extends Command {
             const reactionMessage = {
             react: `✅`
 }
-            let text = `👋🏻 (❤️ω💙)Konichiwa! *@${M.sender.jid.split('@')[0]}*, I'm ♡︎ᴀIᴋA♡︎!This is my simple command list and I am here to help you with my command list!
+            let text = `👋🏻 (❤️ω💙)Konichiwa! *@${M.sender.jid.split('@')[0]}*, I'm ♡︎ᴀIᴋA♡︎! This is my simple command list and I am here to help you with my command list!
 
 🏮My prefix is - ${this.helper.config.prefix}
 
@@ -40,6 +40,7 @@ module.exports = class command extends Command {
 💮GitHub ~ https://github.com/Toshi-san001
   
     ⭐ COMMAND LIST ⭐
+
 *━━━━〖･General•〗━━━━*
 
 ❐ Hi, help, rank, profile
@@ -56,7 +57,7 @@ module.exports = class command extends Command {
 
 ❐ waifu, character, neko, kitsune, manga, anime
 
-☘️ *Note:* Use ${this.helper.config.prefix}help <command_name> for more info of a specific command. Example: *${this.helper.config.prefix}help hello*`
+📒 *Note:* Use ${this.helper.config.prefix}help <command_name> for more info of a specific command. Example: *${this.helper.config.prefix}help hello*`
 
 return void (await M.reply(text, 'text', reactionMessage, undefined, undefined, undefined, [M.sender.jid]))
 } else {
