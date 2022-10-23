@@ -60,7 +60,9 @@ ${this.helper.config.prefix}character
 ${this.helper.config.prefix}neko
 ${this.helper.config.prefix}kitsune
 ${this.helper.config.prefix}manga
-${this.helper.config.prefix}anime`
+${this.helper.config.prefix}anime
+
+📕 *Note:* Use ${this.helper.config.prefix}help <command_name> for more info of a specific command. Example: *${this.helper.config.prefix}help hello*`
 
 return void (await M.reply(text, 'text', undefined, undefined, undefined, [M.sender.jid]))
 } else {
