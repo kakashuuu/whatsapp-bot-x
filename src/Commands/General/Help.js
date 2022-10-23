@@ -21,7 +21,7 @@ module.exports = class command extends Command {
      */
 
     execute = async (M, args) => {
-        const reactionMessage = {
+        const reactionMessage
         const { context } = args
         if (!context) {
             const commands = Array.from(this.handler.commands, ([command, data]) => ({
