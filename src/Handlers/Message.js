@@ -59,7 +59,7 @@ module.exports = class MessageHandler {
             )
         const cmd = args[0].toLowerCase().slice(prefix.length)
         const command = this.commands.get(cmd) || this.aliases.get(cmd)
-        if (!command) return void M.reply(`No such command|| *${M.sender.username}* Type *${this.helper.config.prefix}help* To Know More`)
+        if (!command) return void M.reply(`No such command|| *${M.sender.username}* Type *${this.helper.config.prefix}help* To Know More.`)
         const disabledCommands = await this.helper.DB.getDisabledCommands()
         const index = disabledCommands.findIndex((CMD) => CMD.command === command.name)
         if (index >= 0)
