@@ -34,25 +34,28 @@ module.exports = class command extends Command {
 📒Note: This is just a simple bot without any fun commands soon all commands will be add in this bot!
 
 🏮My prefix is - ${this.helper.config.prefix}
+
 ☘️Owner ~ Toshi_sama
+
 🧧Instagram - https://instagram.com/itz_toshi_02
+
 💮GitHub ~ https://github.com/Toshi-san001
 
 *━━━━〖･General•〗━━━━*
 
-Hi,help,rank,profile
+❐ Hi, help, rank, profile
 
 *━━━━〖･Utils•〗━━━━*
 
-carbon,emoji,prettier,retrieve,sticker
+❐ carbon, emoji, prettier, retrieve, sticker
 
 *━━━━〖･Moderation•〗━━━━*
 
-ping
+❐ ping
 
 *━━━━〖･Weeb•〗━━━━*
 
-waifu,character,neko,kitsune,manga,anime
+❐ waifu, character, neko, kitsune, manga, anime
 
 📕 *Note:* Use ${this.helper.config.prefix}help <command_name> for more info of a specific command. Example: *${this.helper.config.prefix}help hello*`
 
