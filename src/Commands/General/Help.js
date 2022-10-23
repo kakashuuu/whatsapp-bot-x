@@ -27,11 +27,13 @@ module.exports = class command extends Command {
                 data
             }))
             let text = `👋🏻 (❤️ω💙)Konichiwa! *@${M.sender.jid.split('@')[0]}*, I'm ♡︎ᴀIᴋA♡︎!
+
 📒Note: This is just a simple bot without any fun commands soon all commands will be add in this bot!
 
 🏮My prefix is - ${this.helper.config.prefix}
-☘️ Owner ~ Toshi_sama
+☘️Owner ~ Toshi_sama
 🧧Instagram - https://instagram.com/itz_toshi_02
+💮GitHub ~ https://github.com/Toshi-san001
 
 *━━━❰ General ❱━━━*
 
