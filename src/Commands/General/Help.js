@@ -28,6 +28,8 @@ module.exports = class command extends Command {
                 data
             }))
             const reactionMessage = {
+            react: {
+                text: `✅`
 }
             let text = `👋🏻 (❤️ω💙)Konichiwa! *@${M.sender.jid.split('@')[0]}*, I'm ♡︎ᴀIᴋA♡︎!
 
