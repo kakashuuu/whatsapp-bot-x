@@ -7,6 +7,7 @@ module.exports = class command extends Command {
             description: "Displays the bot's usable commands",
             category: 'general',
             exp: 20,
+            react: '✅',
             usage: 'help || help <command_name>',
             aliases: ['h'],
             cooldown: 10
@@ -20,6 +21,7 @@ module.exports = class command extends Command {
      */
 
     execute = async (M, args) => {
+        const reactionMessage = {
         const { context } = args
         if (!context) {
             const commands = Array.from(this.handler.commands, ([command, data]) => ({
@@ -65,7 +67,7 @@ ${this.helper.config.prefix}anime
 
 📕 *Note:* Use ${this.helper.config.prefix}help <command_name> for more info of a specific command. Example: *${this.helper.config.prefix}help hello*`
 
-return void (await M.reply(text, 'text', undefined, undefined, undefined, [M.sender.jid]))
+return void (await M.reply(from, reactionMessage, text, 'text', undefined, undefined, undefined, [M.sender.jid]))
 } else {
             const cmd = context.trim().toLowerCase()
             const command = this.handler.commands.get(cmd) || this.handler.aliases.get(cmd)
