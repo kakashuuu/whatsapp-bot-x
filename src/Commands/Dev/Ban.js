@@ -6,7 +6,7 @@ module.exports = class command extends Command {
         super('ban', {
             description: 'Ban/unban users',
             category: 'dev',
-            usage: 'ban [tag/quote users] --action=[ban/unban]',
+            usage: 'ban',
             cooldown: 5
         })
     }
@@ -31,7 +31,7 @@ module.exports = class command extends Command {
         const action = flags[0].split('=')[1]
         if (!action || action === '')
             return void M.reply(
-                `Provide the action of the ban. Example: *${this.helper.config.prefix}ban --action=ban*`
+                `Provide the action of the ban. Example: *${this.helper.config.prefix}ban*`
             )
         if (!actions.includes(action.toLowerCase())) return void M.reply('Invalid action')
         let text = `🚦 *State: ${action.toLowerCase() === 'ban' ? 'BANNED' : 'UNBANNED'}*\n⚗ *Users:*\n`
