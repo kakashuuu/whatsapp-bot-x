@@ -21,7 +21,7 @@ module.exports = class command extends Command {
      */
 
     execute = async (M, args) => {
-        const reactionMessage
+        const reactionMessage =
         const { context } = args
         if (!context) {
             const commands = Array.from(this.handler.commands, ([command, data]) => ({
@@ -67,7 +67,7 @@ ${this.helper.config.prefix}anime
 
 📕 *Note:* Use ${this.helper.config.prefix}help <command_name> for more info of a specific command. Example: *${this.helper.config.prefix}help hello*`
 
-return void (await M.reply(reactionMessage, text, 'text', undefined, undefined, undefined, [M.sender.jid]))
+return void (await M.reply(text, 'text', reactionMessage, undefined, undefined, undefined, [M.sender.jid]))
 } else {
             const cmd = context.trim().toLowerCase()
             const command = this.handler.commands.get(cmd) || this.handler.aliases.get(cmd)
