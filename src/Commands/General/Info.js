@@ -20,9 +20,36 @@ module.exports = class command extends Command {
      */
 
     execute = async (M) => {
-        const users = await this.client.DB.user.count();
-        const uptime = this.client.utils.formatSeconds(process.uptime())
-        const text = `🔰 *Commands:* ${this.handler.commands.size}\n\n💮 *Uptime:* ${uptime}\n\n🌀 *Users: ${users}*`
+        const pad = (s) => (s < 10 ? '0' : '') + s
+        const formatTime = (seconds) => {
+            const hours = Math.floor(seconds / (60 * 60))
+            const minutes = Math.floor((seconds % (60 * 60)) / 60)
+            const secs = Math.floor(seconds % 60)
+            return `${pad(hours)}:${pad(minutes)}:${pad(secs)}`
         }
+        const uptime = formatTime(process.uptime())
+        const text = `💮 *AiKa* 💮\n\n📙 *Description: ${description}*\n\n🧧 *Commands:* ${
+            Array.from(this.handler.commands, ([command, data]) => ({
+                command,
+                data
+            })).length
+        }\n\n🚦 *Uptime:* ${uptime}`
+        return void (await this.client.sendMessage(
+            M.from,
+            {
+                image,
+                caption: text,
+                contextInfo: {
+                    externalAdReply: {
+                        title: name,
+                        mediaType: 1,
+                        thumbnail: image,
+                    }
+                }
+            },
+            {
+                quoted: M.message
+            }
+        ))
     }
 }
