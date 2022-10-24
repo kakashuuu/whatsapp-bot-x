@@ -1,4 +1,4 @@
-const { Command, Message } from '../../Structures'
+const Message { Command, Message } from '../../Structures'
 
 module.exports = class command extends Command {
     constructor() {
