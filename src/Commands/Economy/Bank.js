@@ -25,7 +25,7 @@ module.exports = class command extends Command {
      ]
        const buttonMessage = {
             text: `🏦 *Bank* 🏦\n\n🧧 *Name:- ${sender.username}*\n\n  🌀 *Tag: #${tag}*\n\n🪙 *Gold: ${bank}*`,
-            footer: '© Eternity 2022',
+            footer: '',
             buttons: buttons,
             headerType: 1
         }
