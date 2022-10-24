@@ -37,11 +37,10 @@ module.exports = class command extends Command {
         return void (await this.client.sendMessage(
             M.from,
             {
-                image,
                 caption: text,
                 contextInfo: {
                     externalAdReply: {
-                        title: name,
+                        title: AiKa
                         mediaType: 1,
                         thumbnail: image,
                     }
