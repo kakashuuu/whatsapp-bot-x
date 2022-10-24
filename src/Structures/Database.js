@@ -73,6 +73,17 @@ module.exports = class Database {
         return result.disabledCommands
     }
 
+    /**
+     * @param {string} jid
+     * @param {number} gold
+     * @param {field} 'wallet' | 'bank'
+     * @returns {Promise<void>}
+     */
+
+setGold = async (jid, gold, field = 'wallet') => {
+        await this.updateUser(jid, field, 'inc', gold)
+    }
+
     user = userSchema
 
     group = groupSchema
