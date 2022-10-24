@@ -1,4 +1,4 @@
-const Message = require('../../Structures/Database')
+const Command = require('../../Structures/Database')
 
 module.exports = class command extends Command {
     constructor() {
@@ -12,8 +12,9 @@ module.exports = class command extends Command {
     }
 
     /**
-     * @param {Message} M
-     * @param {import('../../Structures/Database').args} args
+     * @param {string} jid
+     * @param {number} gold
+     * @param {field} 'wallet' | 'bank'
      * @returns {Promise<void>}
      */
 
