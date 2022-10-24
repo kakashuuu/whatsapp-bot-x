@@ -58,6 +58,10 @@ module.exports = class command extends Command {
 
 ❐ waifu, character, neko, kitsune, manga, anime
 
+*━━━━〖･Nsfw•〗━━━━*
+
+❐ ahegao, blowjob, cum, femdom, foot, gangbang, glasses, hentai
+
 📒 *Note:* Use ${this.helper.config.prefix}help <command_name> for more info of a specific command. Example: *${this.helper.config.prefix}help hello*`
 
 return void (await M.reply(text, 'text', reactionMessage, undefined, undefined, undefined, [M.sender.jid]))
