@@ -3,7 +3,7 @@ const Command = require('../../Structures/Command')
 module.exports = class command extends Command {
     constructor() {
         super('ero', {
-            description: 'Sends a random nsfw blowjob image',
+            description: 'Sends a random nsfw ero image',
             category: 'nsfw',
             usage: 'ero',
             exp: 20,
