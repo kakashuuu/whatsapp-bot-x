@@ -23,7 +23,11 @@ const schema = new Schema({
         type: Boolean,
         required: true,
         default: false
-    }
+    },
+    casino: {
+        type: Boolean,
+        required: true,
+        default: false
 })
 
 module.exports = model('groups', schema)
