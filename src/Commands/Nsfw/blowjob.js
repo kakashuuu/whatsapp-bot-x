@@ -1,14 +1,22 @@
-import { BaseCommand, Command, Message } from '../../Structures'
+const Message = require('../../Structures/Message')
 
-@Command('blowjob', {
-    description: 'Sends a random nsfw blowjob image',
-    category: 'nsfw',
-    usage: 'blowjob',
-    exp: 20,
-    cooldown: 5
-})
-export default class extends BaseCommand {
-    public override execute = async (M: Message): Promise<void> => {
+module.exports = class command extends Command {
+    constructor() {
+        super('neko', {
+            description: 'Sends random neko image',
+            category: 'weeb',
+            usage: 'neko',
+            exp: 20,
+            cooldown: 5
+        })
+    }
+
+    /**
+     * @param {Message} M
+     * @returns {Promise<void>}
+     */
+
+    execute = async (M: Message): Promise<void> => {
        const prefix = this.client.config.prefix
        const buttons = [
         { buttonId: `${prefix}blowjob`, buttonText: {displayText: 'NEXT ➡️'}, type: 1},
