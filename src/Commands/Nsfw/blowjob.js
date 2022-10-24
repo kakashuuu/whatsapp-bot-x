@@ -17,14 +17,14 @@ module.exports = class command extends Command {
      */
 
     execute = async (M) => {
-       const prefix = this.client.config.prefix
+       const prefix = this.helper.config.prefix
        const buttons = [
         { buttonId: `${prefix}blowjob`, buttonText: {displayText: 'NEXT ➡️'}, type: 1},
      ]
        const buttonMessage = {
        image: { url: 'https://api-reysekha.herokuapp.com/api/nsfw/blowjob?apikey=APIKEY'},
        caption: '*Here, you go!*',
-       footer: `${this.client.config.name}`,
+       footer: `${this.helper.config.name}`,
        buttons: buttons,
        headerType: 1
      }
