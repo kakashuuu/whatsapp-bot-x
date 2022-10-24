@@ -28,9 +28,7 @@ module.exports = class command extends Command {
         try {
             const response = await this.helper.utils.fetch(
                 `${encodeURI(
-                    `http://api.brainshop.ai/get?bid=${params.get('bid')}&key=${params.get('key')}&uid=${
-                        M.from
-                    }&msg=${texas}`
+                    `http://api.brainshop.ai/get?bid=165801&key=1ftAuFL7Fhj21Fyp&uid=[uid]&msg=[msg]`
                 )}`
             )
             return void M.reply(response.cnt)
