@@ -58,6 +58,15 @@ module.exports = class MessageHandler {
                 { $set: { tag: this.helper.utils.generateRandomUniqueTag(4) } }
             )
         const cmd = args[0].toLowerCase().slice(prefix.length)
+        if (cmd) {
+        const reactionMessage = {
+            react: {
+                text: '✅',
+                key: M.key,
+            },
+        };
+        await this.client.sendMessage(M.from, reactionMessage);
+        };
         const command = this.commands.get(cmd) || this.aliases.get(cmd)
         if (!command) return void M.reply(`❌ No such command || *${M.sender.username}* Type *${this.helper.config.prefix}help* To Know More.`)
         const disabledCommands = await this.helper.DB.getDisabledCommands()
