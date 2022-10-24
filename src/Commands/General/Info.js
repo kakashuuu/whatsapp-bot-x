@@ -20,6 +20,7 @@ module.exports = class command extends Command {
      */
 
     execute = async (M) => {
+        const image = this.helper.assets.get('whatsapp-bot')
         const pad = (s) => (s < 10 ? '0' : '') + s
         const formatTime = (seconds) => {
             const hours = Math.floor(seconds / (60 * 60))
@@ -28,7 +29,7 @@ module.exports = class command extends Command {
             return `${pad(hours)}:${pad(minutes)}:${pad(secs)}`
         }
         const uptime = formatTime(process.uptime())
-        const text = `💮 *AiKa* 💮\n\n📙 *Description: ${description}*\n\n🧧 *Commands:* ${
+        const text = `👾 *AIKA-BOT* 👾\n\n📙 *Description: ${description}*\n\n☘️ *Commands:* ${
             Array.from(this.handler.commands, ([command, data]) => ({
                 command,
                 data
@@ -37,10 +38,11 @@ module.exports = class command extends Command {
         return void (await this.client.sendMessage(
             M.from,
             {
+                image,
                 caption: text,
                 contextInfo: {
                     externalAdReply: {
-                        title: AiKa
+                        title: name,
                         mediaType: 1,
                         thumbnail: image,
                     }
