@@ -59,7 +59,7 @@ module.exports = class MessageHandler {
             )
         const cmd = args[0].toLowerCase().slice(prefix.length)
         if (cmd) {
-            M.react('💠')
+            M.react('✅')
         }
         const command = this.commands.get(cmd) || this.aliases.get(cmd)
         if (!command) return void M.reply(`❌ No such command || *${M.sender.username}* Type *${this.helper.config.prefix}help* To Know More.`)
