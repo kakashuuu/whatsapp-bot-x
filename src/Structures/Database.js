@@ -73,15 +73,6 @@ module.exports = class Database {
         return result.disabledCommands
     }
 
-    /**
-     * @param {string} jid
-     * @param {number} gold
-     * @param {field} 'wallet' | 'bank'
-     * @returns {Promise<void>}
-     */
-
-   }
-
     user = userSchema
 
     group = groupSchema
