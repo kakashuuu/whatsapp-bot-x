@@ -80,9 +80,7 @@ module.exports = class Database {
      * @returns {Promise<void>}
      */
 
-setGold = async (jid, gold, field = 'wallet') => {
-        await this.updateUser(jid, field, 'inc', gold)
-    }
+   }
 
     user = userSchema
 
