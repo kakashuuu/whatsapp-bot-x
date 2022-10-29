@@ -29,7 +29,7 @@ module.exports = class command extends Command {
             return `${pad(hours)}:${pad(minutes)}:${pad(secs)}`
         }
         const uptime = formatTime(process.uptime())
-        const text = `👾 *AIKA-BOT* 👾\n\n📙 *Description: ${description}*\n\n☘️ *Commands:* ${
+        const text = `  👾 *AIKA-BOT* 👾\n\n📙 *Description: ${description}*\n\n☘️ *Commands:* ${
             Array.from(this.handler.commands, ([command, data]) => ({
                 command,
                 data
