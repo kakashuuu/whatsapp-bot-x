@@ -28,6 +28,6 @@ module.exports = class command extends Command {
        buttons: buttons,
        headerType: 1
      }
-       return void (await this.Client.sendMessage(M.from, buttonMessage))
+       return void (await this.client.sendMessage(M.from, buttonMessage))
     }
 }
