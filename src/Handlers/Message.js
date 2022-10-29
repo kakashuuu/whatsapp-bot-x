@@ -231,7 +231,7 @@ module.exports = class MessageHandler {
                         return client.sendMessage(jid, {
                             video: cgif,
                             caption: `♨️ *==[ ANIME-CARD ]==* ♨️\n\n💮 Name: ${obj.title}\n\n💠 Tier: ${obj.tier}\n\n🏮 Price: ${price}\n\n⎙ INFO ⎙:\nThis cards are originally owned by https://shoob.gg we are using it with all the required permissions.\n\n[ Use
- >                          gifPlayback: true
+                          gifPlayback: true
                         })
                     }
                  else {
@@ -240,7 +240,7 @@ module.exports = class MessageHandler {
                             url: obj.url
                         },
                         caption: `♨️ *==[ ANIME-CARD ]==* ♨️\n\n💮 Name: ${obj.title}\n\n💠 Tier: ${obj.tier}\n\n🏮 Price: ${price}\n\n⎙ INFO ⎙:\nThis cards are originally owned by https://shoob.gg we are using it with all the required permissions.\n\n[ Use *#c
-o>                  });
+                 });
                 }
             } catch (e) {
                 console.log(e)
