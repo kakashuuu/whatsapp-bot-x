@@ -22,7 +22,7 @@ module.exports = class command extends Command {
         { buttonId: `${this.helper.config.prefix}blowjob`, buttonText: {displayText: 'NEXT'}, type: 1},
      ]
        const buttonMessage = {
-       image: { url: 'https://api-reysekha.herokuapp.com/api/nsfw/blowjob?apikey=APIKEY'},
+       image: { url: 'https://api.waifu.pics/nsfw/blowjob'},
        caption: '*Here, you go!*',
        footer: `Aika`,
        buttons: buttons,
