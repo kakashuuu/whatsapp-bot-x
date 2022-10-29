@@ -37,32 +37,33 @@ module.exports = class command extends Command {
 🎉Owner ~ Toshi_sama
 
 🧧Instagram - https://instagram.com/itz_toshi_02
-
-💮GitHub ~ https://github.com/Toshi-san001
   
-    ⭐ COMMAND LIST ⭐
+   |👾 COMMAND LIST 👾|
 
 *━━━━〖･General•〗━━━━*
 
-❐ Hi, help, rank, profile
+🧧 Hi, help, rank, profile
 
 *━━━━〖･Utils•〗━━━━*
 
-❐ carbon, emoji, prettier, retrieve, sticker
+🧧 carbon, emoji, prettier, retrieve, sticker
 
 *━━━━〖･Moderation•〗━━━━*
 
-❐ ping
+🧧 ping
 
 *━━━━〖･Weeb•〗━━━━*
 
-❐ waifu, character, neko, kitsune, manga, anime
+🧧 waifu, character, neko, kitsune, manga, anime
 
 *━━━━〖･Nsfw•〗━━━━*
 
-❐ ahegao, blowjob, cum, femdom, foot, gangbang, glasses, hentai
+🧧 ahegao, blowjob, cum, femdom, foot, gangbang, glasses, hentai
 
-📒 *Note:* Use ${this.helper.config.prefix}help <command_name> for more info of a specific command. Example: *${this.helper.config.prefix}help hello*`
+📒 *Note:* Use ${this.helper.config.prefix}help <command_name> for more info of a specific command. Example: *${this.helper.config.prefix}help hello*
+
+
+💮GitHub ~ https://github.com/Toshi-san001`
 
 return void (await M.reply(text, 'text', reactionMessage, undefined, undefined, undefined, [M.sender.jid]))
 } else {
