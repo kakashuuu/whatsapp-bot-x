@@ -24,14 +24,14 @@ module.exports = class command extends Command {
         const hidden = this.getPingOptions(flags)
         flags.forEach((flag) => (context = context.replace(flag, '')))
         const message = context ? context.trim() : M.quoted ? M.quoted.content : ''
-        let text = `${message !== '' ? `🏮 *Message: ${message}*\n\n` : ''}💬 *Group:* ${
+        let text = `${message !== '' ? `📬 *Message: ${message}*\n\n` : ''}💬 *Group:* ${
             M.groupMetadata.subject
         }\n👥 *Members:* ${M.groupMetadata.participants.length}\n📣 *Tagger: @${
             M.sender.jid.split('@')[0]
         }*\n📧 *Tags:* ${hidden ? '*[HIDDEN]*' : '\n'}`
         const botJid = this.helper.correctJid(this.client.user?.id || '')
         if (!hidden) {
-            text += `\n🎉 *@${botJid.split('@')[0]}*`
+            text += `\n🤖 *@${botJid.split('@')[0]}*`
             const mods = []
             const admins = []
             const members = []
@@ -50,7 +50,7 @@ module.exports = class command extends Command {
             for (let i = 0; i < mods.length; i++) text += `${i === 0 ? '\n\n' : '\n'}🏅 *@${mods[i].split('@')[0]}*`
             for (let i = 0; i < admins.length; i++) text += `${i === 0 ? '\n\n' : '\n'}👑 *@${admins[i].split('@')[0]}*`
             for (let i = 0; i < members.length; i++)
-                text += `${i === 0 ? '\n\n' : '\n'}⭐ *@${members[i].split('@')[0]}*`
+                text += `${i === 0 ? '\n\n' : '\n'}👥 *@${members[i].split('@')[0]}*`
         }
         return void (await M.reply(
             text,
