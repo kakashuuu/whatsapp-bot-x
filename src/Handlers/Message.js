@@ -185,74 +185,7 @@ module.exports = class MessageHandler {
         const admin = !data[index] || !data[index].admin || data[index].admin === null ? false : true
         return admin
     }
-       async function spawnCard(jid) {
-            try {
-                const {
-                    data
-                } = await axios.get("https://raw.githubusercontent.com/Toshi-san001/Card.json/main/cards.json")
-                let i = Math.floor(Math.random() * data.length);
-                obj = data[i]
-                price = ""
-                switch (obj.tier) {
-                case "1": {
-                    price = getRandomInt(10000)
-                }
-                break
-                case "2": {
-                    price = getRandomInt(15000)
-                }
-                break
-                case "3": {
-                    price = getRandomInt(15000)
-                }
-                break
-                case "4": {
-                    price = getRandomInt(15000)
-                }
-                break
-                case "5": {
-                    price = getRandomInt(20000)
-                }
-                break
-                case "6": {
-                    price = getRandomInt(20000)
-                }
-                break
-                case "S": {
-                    price = getRandomInt(25000)
-                }
-                break
-                }
-                await db.set(`${jid}_card`, `${obj.title}-${obj.tier}`)
-                await db.set(`${jid}_card_price`, price)
-                if (obj.url.includes("gif")) {
-                   const giif=await fetchBuffer(obj.url)
-                   const cgif= await buffergif(giif)
-                        return client.sendMessage(jid, {
-                            video: cgif,
-                            caption: `♨️ *==[ ANIME-CARD ]==* ♨️\n\n💮 Name: ${obj.title}\n\n💠 Tier: ${obj.tier}\n\n🏮 Price: ${price}\n\n⎙ INFO ⎙:\nThis cards are originally owned by https://shoob.gg we are using it with all the required permissions.\n\n[ Use
-                          gifPlayback: true
-                        })
-                    }
-                 else {
-                    return client.sendMessage(jid, {
-                        image: {
-                            url: obj.url
-                        },
-                        caption: `♨️ *==[ ANIME-CARD ]==* ♨️\n\n💮 Name: ${obj.title}\n\n💠 Tier: ${obj.tier}\n\n🏮 Price: ${price}\n\n⎙ INFO ⎙:\nThis cards are originally owned by https://shoob.gg we are using it with all the required permissions.\n\n[ Use *#c
-                 });
-                }
-            } catch (e) {
-                console.log(e)
-            }
-        }
-            if (body) {
-                await db.add(`${m.from}-card-count`, 1);
-                cardCount = await db.get(`${m.from}-card-count`)
-                if (cardCount > 45 && poke.includes(m.from)) {
-                    spawnCard(m.from)
-                    await db.delete(`${m.from}-card-count`);
-                }
+       
 }
 
 /**
