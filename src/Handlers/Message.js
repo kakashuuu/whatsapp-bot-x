@@ -61,6 +61,7 @@ module.exports = class MessageHandler {
         if (cmd) {
             M.react('✅')
         }
+        await this.client.DB.updateUser(M.sender.jid, 'tag', this.client.utils.generateRandomUniqueTag())
         const command = this.commands.get(cmd) || this.aliases.get(cmd)
         if (!command) return void M.reply(`❌ No such command || *${M.sender.username}* Type *${this.helper.config.prefix}help* To Know More.`)
         const disabledCommands = await this.helper.DB.getDisabledCommands()
