@@ -106,7 +106,7 @@ module.exports = class Database {
  */
 
 /**
- * @typedef {{jid: string, events: boolean, nsfw: boolean, mods: boolean}} group
+ * @typedef {{jid: string, events: boolean, nsfw: boolean, mods: boolean, casino: boolean}} group
  */
 
 /**
