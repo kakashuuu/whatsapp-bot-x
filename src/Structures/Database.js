@@ -72,6 +72,7 @@ module.exports = class Database {
             }).save()
         return result.disabledCommands
     }
+
     /**
      * @param {string} jid
      * @param {number} gold
@@ -79,7 +80,7 @@ module.exports = class Database {
      * @returns {Promise<void>}
      */
 
-    setGold = async (jid, gold, field = 'wallet') => {
+    setGold = async (jid, gold, field = 'wallet','bank') => {
         await this.updateUser(jid, field, 'inc', gold)
     }
 
