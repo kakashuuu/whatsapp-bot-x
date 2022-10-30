@@ -18,7 +18,7 @@ module.exports = class command extends Command {
 
     execute = async (M) => {
        const prefix = this.helper.config.prefix
-       const { bank, tag } = await this.client.DB.getUser(sender.jid)
+       const { bank, tag } = await this.client.DB.getUser(M.sender.jid)
        const buttons = [
         { buttonId: `${this.helper.config.prefix}ahegao`, buttonText: {displayText: 'NEXT'}, type: 1},
      ]
