@@ -18,11 +18,12 @@ module.exports = class command extends Command {
 
     execute = async (M) => {
        const prefix = this.helper.config.prefix
+       const { bank, tag } = await this.client.DB.getUser(sender.jid)
        const buttons = [
         { buttonId: `${this.helper.config.prefix}ahegao`, buttonText: {displayText: 'NEXT'}, type: 1},
      ]
        const buttonMessage = {
-       image: { url: 'https://api-reysekha.herokuapp.com/api/nsfw/ahegao?apikey=APIKEY'},
+       text: `🏦 *Bank* 🏦\n\n🧧 *Name:- ${M.sender.username}*\n\n  🌀 *Id tag: #${tag}*\n\n🪙 *Gold: ${bank}*`,
        caption: '*Here you go!*',
        footer: `Aika`,
        buttons: buttons,
