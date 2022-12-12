@@ -1,4 +1,4 @@
-const { userSchema, groupSchema, contactSchema, sessionSchema, commandSchema } = require('../Database')
+const { userSchema, groupSchema, contactSchema, sessionSchema, commandSchema, featureSchema } = require('../Database')
 const { Utils } = require('../lib')
 
 module.exports = class Database {
@@ -84,6 +84,27 @@ module.exports = class Database {
         await this.updateUser(jid, field, 'inc', gold)
     }
 
+    /**
+     * @param {string} feature 
+     * @returns {Promise<feature>}
+     */
+
+    getFeature = async (feature) =>
+        (await this.feature.findOne({ feature })) ||
+        (await new this.feature({
+            feature 
+        }).save())
+
+    /**
+     * @param {string} feature 
+     * @param {boolean} update
+     */
+
+    updateFeature = async (feature, update) => {
+        await this.getFeature(feature)
+        await this.feature.updateOne({ feature: feature }, { $set: { state: update } })
+    }
+
     user = userSchema
 
     group = groupSchema
@@ -93,6 +114,8 @@ module.exports = class Database {
     session = sessionSchema
 
     disabledCommands = commandSchema
+
+    feature = featureSchema
 
     /**
      * @private
