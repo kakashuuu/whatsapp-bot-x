@@ -3,5 +3,6 @@ module.exports = {
     groupSchema: require('./Models/Group'),
     contactSchema: require('./Models/Contact'),
     sessionSchema: require('./Models/Session'),
-    commandSchema: require('./Models/Command')
+    commandSchema: require('./Models/Command'),
+    featureSchema: require('./Models/Feature')
 }
