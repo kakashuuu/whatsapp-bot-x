@@ -39,6 +39,24 @@ module.exports = class MessageHandler {
                 title = 'Group'
             }
         }
+        const text = M.content
+        if (M.chat === 'dm' && (await this.helper.DB.getFeature('chatbot')).state) {
+          if (M.message.key.fromMe) return null;
+            if (this.helper.config.chatBotUrl) {
+                const myUrl = this.helper.config.chatBotUrl
+                let get = new URL(myUrl)
+                let params = get.searchParams;
+                    await axios
+                    .get(`${encodeURI(`http://api.brainshop.ai/get?bid=${params.get('bid')}&key=${params.get('key')}&uid=${M.sender.jid}&msg=${text}`)}`)       
+                    .then((res) => {
+                        if (res.status !== 200) return void M.reply(`Error: ${res.status}`)
+                        return void M.reply(res.data.cnt)
+                    })
+                    .catch(() => {
+                        M.reply(`Well....`)
+                    })
+            }
+        }
         if (!args[0] || !args[0].startsWith(prefix))
             return void this.helper.log(
                 `${chalk.cyanBright('Message')} from ${chalk.yellowBright(M.sender.username)} in ${chalk.blueBright(
