@@ -1,8 +1,8 @@
 {
-  "name": "AiKa",
+  "name": "Siesta",
   "version": "0.0.1",
   "description": "A WhatsApp bot written in JavaScript using Baileys",
-  "author": "Toshi_San",
+  "author": "Dipeshu-001",
   "keywords": [
     "bot",
     "whatsapp",
@@ -22,12 +22,12 @@
     "url": "https://github.com/Toshi-san001/whatsapp-bot-x.git"
   },
   "dependencies": {
-    "@adiwajshing/baileys": "^4.4.0",
+    "@whiskeysockets/baileys": "^6.7.2",
     "@adiwajshing/keyed-db": "^0.2.4",
     "@hapi/boom": "^10.0.0",
     "@shineiichijo/marika": "^2.0.3",
     "axios": "^0.27.2",
-    "canvacord": "5.2.3",
+    "canvacord": "5.4.10",
     "chalk": "4.1.1",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
@@ -41,6 +41,6 @@
     "qr-image": "^3.2.0",
     "qrcode-terminal": "^0.12.0",
     "unofficial-carbon-now": "^1.0.6",
-    "wa-sticker-formatter": "^4.3.2"
+    "wa-sticker-formatter": "^4.4.4"
   }
 }
