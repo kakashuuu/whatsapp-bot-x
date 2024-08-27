@@ -1,4 +1,4 @@
-const Baileys = require('@adiwajshing/baileys').default
+const Baileys = require('@whiskeysockets/baileys').default
 const Helper = require('./Helper')
 const Message = require('./Message')
 const MessageHandler = require('../Handlers/Message')
