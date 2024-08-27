@@ -1,4 +1,4 @@
-const { default: Baileys, proto, downloadContentFromMessage } = require('@adiwajshing/baileys')
+const { default: Baileys, proto, downloadContentFromMessage } = require('@whiskeysockets/baileys')
 const { Utils } = require('../lib')
 const Contact = require('./Contact')
 
