@@ -1,4 +1,4 @@
-const Baileys = require('@whiskeysockets/baileys').default
+const ‎‎makeWASocket = require('@whiskeysockets/baileys').default
 const Helper = require('./Helper')
 const Message = require('./Message')
 const MessageHandler = require('../Handlers/Message')
