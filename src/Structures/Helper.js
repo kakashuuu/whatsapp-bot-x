@@ -38,5 +38,5 @@ module.exports = class Helper {
      */
 
     log = (text, error = false) =>
-        console.log(chalk[error ? 'red' : 'blue']('[BOT]'), chalk[error ? 'redBright' : 'greenBright'](text))
+        console.log(chalk[error ? 'red' : 'blue']('[BOTTTO]'), chalk[error ? 'redBright' : 'greenBright'](text))
 }
