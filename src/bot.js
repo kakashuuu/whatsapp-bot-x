@@ -1,5 +1,5 @@
 require('dotenv').config()
-const { default: Baileys, DisconnectReason, fetchLatestBaileysVersion } = require('@whiskeysockets/baileys')
+const { default: ‎‎makeWASocket, DisconnectReason, fetchLatestBaileysVersion } = require('@whiskeysockets/baileys')
 const P = require('pino')
 const { Boom } = require('@hapi/boom')
 const qr = require('qr-image')
@@ -37,7 +37,7 @@ const start = async () => {
 
     const { saveState, state, clearState } = await useAuthFromDatabase()
 
-    const client = Baileys({
+    const client = ‎‎makeWASocket({
         version: (await fetchLatestBaileysVersion()).version,
         printQRInTerminal: true,
         auth: state,
