@@ -1,5 +1,5 @@
 require('dotenv').config()
-const { default: ‎‎makeWASocket, DisconnectReason, fetchLatestBaileysVersion } = require('@whiskeysockets/baileys')
+const { default: makeWASocket, DisconnectReason, fetchLatestBaileysVersion } = require('@whiskeysockets/baileys')
 const P = require('pino')
 const { Boom } = require('@hapi/boom')
 const qr = require('qr-image')
